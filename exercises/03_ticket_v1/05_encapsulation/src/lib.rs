@@ -22,12 +22,24 @@ pub mod ticket {
             if status != "To-Do" && status != "In Progress" && status != "Done" {
                 panic!("Only `To-Do`, `In Progress`, and `Done` statuses are allowed");
             }
-
+           
             Ticket {
                 title,
                 description,
-                status,
+                status
+            }    
+        }
+
+        pub fn description(self)-> String{
+            self.description
             }
+
+        pub fn title(self)-> String{
+            self.title
+        }
+
+        pub fn status(self)-> String{
+            self.status
         }
 
         // TODO: Add three public methods to the `Ticket` struct:
